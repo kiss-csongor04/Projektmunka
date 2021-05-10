@@ -18,17 +18,37 @@
             <h4 class="card-title" style="text-align: center;">Háromszög kerület, terület számítás</h4>
             <p class="card-text" style="">
                 <form style="text-align: center;" name="szamol">
-                    <p>Milyen hosszú az <b>a</b> oldal? <input type="number" name="egy"> <b>cm</b><br></p>
-                    <p>Mekkora a <b>h</b> (háromszög magassága)? <input type="number" name="ketto"> <b>cm</b><br></p>
+                    <p>Milyen hosszú az <b>a</b> oldal? <input type="number" id="egy" name="egy"> <b>cm</b><br></p>
+                    <p>Mekkora a <b>h</b> (háromszög magassága)? <input type="number" id="ketto" name="ketto"> <b>cm</b><br></p>
                     <input class="btn btn-dark" style="width: 180px; height: 40px;" type="button" value=" Terület számítás " onClick="terulet()">
                     <input class="btn btn-dark" style="width: 180px; height: 40px;" type="button" value=" Kerület számítás" onClick="kerulet()"><br><br>
                     <b>Eredmény:</b> <input name="eredmeny"> <b>cm<sup>2</sup></b>
                     </form>
                     <script>
                     function terulet() {
+                        var x = parseInt(document.getElementById("egy").value);
+                        var y = parseInt(document.getElementById("ketto").value);
+                        if (x <= 0) {
+                            alert("Nem lehet a beírt adat 0 vagy annál kisebb szám!")
+                                eredmeny.reset()
+                        }
+                        if (y <= 0) {
+                            alert("Nem lehet a beírt adat 0 vagy annál kisebb szám!")
+                                eredmeny.reset()
+                        }
                     document.szamol.eredmeny.value = document.szamol.egy.value / 2 * document.szamol.ketto.value;
                     }
                     function kerulet() {
+                        var x = parseInt(document.getElementById("egy").value);
+                        var y = parseInt(document.getElementById("ketto").value);
+                        if (x <= 0) {
+                            alert("Nem lehet a beírt adat 0 vagy annál kisebb szám!")
+                                eredmeny.reset()
+                        }
+                        if (y <= 0) {
+                            alert("Nem lehet a beírt adat 0 vagy annál kisebb szám!")
+                                eredmeny.reset()
+                        }
                     document.szamol.eredmeny.value = document.szamol.egy.value * 3;
                     }
                     </script>

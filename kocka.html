@@ -18,7 +18,7 @@
             <h4 class="card-title" style="text-align: center;">Kocka térfogat, felszín számítás</h4>
             <p class="card-text" style="">
                 <form name="szamol">
-                <p style="text-align: center;">Milyen hosszú az <strong>"a"</strong> oldal? <input type="number" name="egy"> <b>cm</b></p>
+                <p style="text-align: center;">Milyen hosszú az <strong>"a"</strong> oldal? <input type="number" id="egy" name="egy"> <b>cm</b></p>
                 <p style="text-align: center;">
                     <input class="btn btn-dark" style="width: 180px; height: 40px;" type="button" value=" Térfogat számítás " onClick="terfogat()">
                     <input class="btn btn-dark" style="width: 180px; height: 40px;" type="button" value=" Felszín számítás " onClick="felszin()">
@@ -27,9 +27,19 @@
                 </form>
                     <script>
                     function terfogat() {
+                        var x = parseInt(document.getElementById("egy").value);
+                        if (x <= 0) {
+                            alert("Nem lehet a beírt adat 0 vagy annál kisebb szám!")
+                                eredmeny.reset()
+                        }
                     document.szamol.eredmeny.value = document.szamol.egy.value * document.szamol.egy.value * document.szamol.egy.value;
                     }
                     function felszin() {
+                        var x = parseInt(document.getElementById("egy").value);
+                        if (x <= 0) {
+                            alert("Nem lehet a beírt adat 0 vagy annál kisebb szám!")
+                                eredmeny2.reset()
+                        }
                     document.szamol.eredmeny2.value = document.szamol.egy.value * document.szamol.egy.value * 6;
                     }
                     </script>

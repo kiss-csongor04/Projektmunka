@@ -26,10 +26,20 @@
                     </form>
                     <script>
                     function terulet() {
-                    document.szamol.eredmeny.value = document.szamol.egy.value * document.szamol.egy.value;
+                        var x = parseInt(document.getElementById("egy").value);
+                        if (x <= 0) {
+                            alert("Nem lehet a beírt adat 0 vagy annál kisebb szám!")
+                                eredmeny.reset()
+                        }
+                        document.szamol.eredmeny.value = document.szamol.egy.value * document.szamol.egy.value;
                     }
                     function kerulet() {
-                    document.szamol.eredmeny.value = document.szamol.egy.value * 4;
+                        var x = parseInt(document.getElementById("egy").value);
+                        if (x <= 0) {
+                            alert("Nem lehet a beírt adat 0 vagy annál kisebb szám!")
+                                eredmeny.reset()
+                        }
+                        document.szamol.eredmeny.value = document.szamol.egy.value * 4;
                     }
                     </script>
                 </p>
