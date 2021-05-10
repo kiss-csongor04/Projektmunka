@@ -18,19 +18,20 @@
             <h4 class="card-title" style="text-align: center;">Téglatest térfogat, felszín számítás</h4>
             <p class="card-text" style="">
                 <form style="text-align: center;" name="szamol">
-                    <p>Milyen hosszú az <b>a</b> oldal? <input type="number" name="egy"><br></p>
-                    <p>Miylen hosszú a <b>b</b> oldal? <input type="number" name="ketto"><br></p>
-                    <p>Miylen hosszú a <b>c</b> oldal? <input type="number" name="harom"><br></p>
+                    <p>Milyen hosszú az <b>a</b> oldal? <input type="number" name="egy"><b> cm</b><br></p> 
+                    <p>Miylen hosszú a <b>b</b> oldal? <input type="number" name="ketto"><b> cm</b><br></p> 
+                    <p>Miylen hosszú a <b>c</b> oldal? <input type="number" name="harom"><b> cm</b><br></p> 
                     <input class="btn btn-dark" style="width: 180px; height: 40px;" type="button" value=" Térfogat számítás " onClick="terfogat()">
                     <input class="btn btn-dark" style="width: 180px; height: 40px;" type="button" value=" Felszín számítás " onClick="felszin()"><br><br>
-                    <b>Eredmény:</b> <input name="eredmeny">
-                    </form>
+                    <br><br><u><b>Eredmény: </b></u><input style="width: 80px;" name="eredmeny"> <b>cm<sup>3 </sup></b><br>
+                    <br><u><b>Eredmény: </b></u><input style="width: 80px;" name="eredmeny2"> <b>cm<sup>2</sup></b>
+                </form>
                     <script>
                     function terfogat() {
                     document.szamol.eredmeny.value = document.szamol.egy.value * document.szamol.ketto.value * document.szamol.harom.value;
                     }
                     function felszin() {
-                    document.szamol.eredmeny.value = document.szamol.egy.value * document.szamol.ketto.value * 2 + document.szamol.egy.value * document.szamol.harom.value * 2 + document.szamol.ketto.value * document.szamol.harom.value * 2;
+                    document.szamol.eredmeny2.value = document.szamol.egy.value * document.szamol.ketto.value * 2 + document.szamol.egy.value * document.szamol.harom.value * 2 + document.szamol.ketto.value * document.szamol.harom.value * 2;
                     }
                     </script>
                 </p>

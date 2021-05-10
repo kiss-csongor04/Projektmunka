@@ -7,7 +7,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="index.css">
-    <title>Háromszög kerület, terület számítás</title>
+    <title>Szabályos háromszög kerület, terület számítás</title>
 </head>
 <body>
     <div>
@@ -18,11 +18,11 @@
             <h4 class="card-title" style="text-align: center;">Háromszög kerület, terület számítás</h4>
             <p class="card-text" style="">
                 <form style="text-align: center;" name="szamol">
-                    <p>Milyen hosszú az <b>a</b> oldal? <input type="number" name="egy"><br></p>
-                    <p>Mekkora a <b>h</b> (háromszög magassága)? <input type="number" name="ketto"><br></p>
+                    <p>Milyen hosszú az <b>a</b> oldal? <input type="number" name="egy"> <b>cm</b><br></p>
+                    <p>Mekkora a <b>h</b> (háromszög magassága)? <input type="number" name="ketto"> <b>cm</b><br></p>
                     <input class="btn btn-dark" style="width: 180px; height: 40px;" type="button" value=" Terület számítás " onClick="terulet()">
                     <input class="btn btn-dark" style="width: 180px; height: 40px;" type="button" value=" Kerület számítás" onClick="kerulet()"><br><br>
-                    <b>Eredmény:</b> <input name="eredmeny">
+                    <b>Eredmény:</b> <input name="eredmeny"> <b>cm<sup>2</sup></b>
                     </form>
                     <script>
                     function terulet() {
