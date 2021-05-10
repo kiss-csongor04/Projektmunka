@@ -22,7 +22,8 @@
                 <p style="text-align: center;">
                     <input class="btn btn-dark" style="width: 180px; height: 40px;" type="button" value=" Terület számítás "onClick="terulet()">
                     <input class="btn btn-dark" style="width: 180px; height: 40px;" type="button" value=" Kerület számítás "onClick="kerulet()">
-                    <br><br><u><b>Eredmény: </b></u><input name="eredmeny"> <b>cm<sup>2</sup></b>
+                    <br><br><b>Terület eredménye: </b><input name="eredmeny"> <b>cm<sup>2</sup></b>
+                    <br><br><b>Kerület eredménye: </b><input name="eredmeny2"> <b>cm</b>
                     </form>
                     <script>
                     function terulet() {
@@ -39,7 +40,7 @@
                             alert("Nem lehet a beírt adat 0 vagy annál kisebb szám!")
                                 eredmeny.reset()
                         }
-                        document.szamol.eredmeny.value = document.szamol.egy.value * 4;
+                        document.szamol.eredmeny2.value = document.szamol.egy.value * 4;
                     }
                     </script>
                 </p>
