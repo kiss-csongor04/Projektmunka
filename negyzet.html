@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Négyzet terület, kerület számolása</title>
+</head>
+<body>
+    <div>
+        <div class="card bg-info text-dark" style="width: 50%; margin-left: 25%;">
+            <a style="margin-left: 100px; margin-right: 100px; margin-top: 20px;" href="index.html" class="btn btn-dark text-info">Vissza a kezdőoldalra</a>
+            <img class="card-img-top" style="padding: 160px;" src="https://www.calculat.org/hu/terulet-kerulet/obr/oo-ct-1.svg" alt="négyzet">
+            <div class="card-body">
+            <h4 class="card-title" style="text-align: center;">Négyzet kerület, terület számítás</h4>
+            <p class="card-text" style="">
+                <form name="szamol">
+                <p style="text-align: center;">Milyen hosszú az <strong>"a"</strong> oldal? <input type="number" id="egy" name="egy"></p>
+                <p style="text-align: center;">
+                    <input class="btn btn-dark" style="width: 180px; height: 40px;" type="button" value=" Terület számítás "onClick="terulet()">
+                    <input class="btn btn-dark" style="width: 180px; height: 40px;" type="button" value=" Kerület számítás "onClick="kerulet()">
+                    <br><br><u><b>Eredmény:</b></u><input name="eredmeny">
+                    </form>
+                    <script>
+                    function terulet() {
+                    document.szamol.eredmeny.value = document.szamol.egy.value * document.szamol.egy.value;
+                    }
+                    function kerulet() {
+                    document.szamol.eredmeny.value = document.szamol.egy.value * 4;
+                    }
+                    </script>
+                </p>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Téglatest térfogat, felszín számítás</title>
+</head>
+<body>
+    <div>
+        <div class="card bg-info text-dark" style="width: 50%; margin-left: 25%;">
+            <a style="margin-left: 100px; margin-right: 100px; margin-top: 20px;" href="index.html" class="btn btn-dark text-info">Vissza a kezdőoldalra</a>
+            <img class="card-img-top" style="padding: 160px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Cube_svg_int.svg/440px-Cube_svg_int.svg.png" alt="négyzet">
+            <div class="card-body">
+            <h4 class="card-title" style="text-align: center;">Téglatest térfogat, felszín számítás</h4>
+            <p class="card-text" style="">
+                <form style="text-align: center;" name="szamol">
+                    <p>Milyen hosszú az <b>a</b> oldal? <input type="number" name="egy"><br></p>
+                    <p>Miylen hosszú a <b>b</b> oldal? <input type="number" name="ketto"><br></p>
+                    <p>Miylen hosszú a <b>c</b> oldal? <input type="number" name="harom"><br></p>
+                    <input class="btn btn-dark" style="width: 180px; height: 40px;" type="button" value=" Térfogat számítás " onClick="terfogat()">
+                    <input class="btn btn-dark" style="width: 180px; height: 40px;" type="button" value=" Felszín számítás " onClick="felszin()"><br><br>
+                    <b>Eredmény:</b> <input name="eredmeny">
+                    </form>
+                    <script>
+                    function terfogat() {
+                    document.szamol.eredmeny.value = document.szamol.egy.value * document.szamol.ketto.value * document.szamol.harom.value;
+                    }
+                    function felszin() {
+                    document.szamol.eredmeny.value = document.szamol.egy.value * document.szamol.ketto.value * 2 + document.szamol.egy.value * document.szamol.harom.value * 2 + document.szamol.ketto.value * document.szamol.harom.value * 2;
+                    }
+                    </script>
+                </p>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
