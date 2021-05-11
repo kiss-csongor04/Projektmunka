@@ -18,29 +18,46 @@
             <h4 class="card-title" style="text-align: center;">Kocka térfogat, felszín számítás</h4>
             <p class="card-text" style="">
                 <form name="szamol">
-                <p style="text-align: center;">Milyen hosszú az <strong>"a"</strong> oldal? <input type="number" id="egy" name="egy"> <b>cm</b></p>
+                <p style="text-align: center;">Milyen hosszú az <strong>"a"</strong> oldal? <input style="text-align: right;" type="number" id="egy" name="egy">
+                    <select id="me">
+                        <option value="mm">mm</option>
+                        <option value="cm">cm</option>
+                        <option value="dm">dm</option>
+                        <option value="m">m</option>
+                      </select>
+                </p>
                 <p style="text-align: center;">
                     <input class="btn btn-dark" style="width: 180px; height: 40px;" type="button" value=" Térfogat számítás " onClick="terfogat()">
                     <input class="btn btn-dark" style="width: 180px; height: 40px;" type="button" value=" Felszín számítás " onClick="felszin()">
-                    <br><br><b>Térfogat eredménye: </b><input style="width: 80px;" name="eredmeny"> <b>cm<sup>3 </sup></b><br>
-                    <br><b>Felszín eredménye: </b><input style="width: 80px;" name="eredmeny2"> <b>cm<sup>2</sup></b>
+                    <br><br><b>Térfogat eredménye: </b><input style="text-align: right;" name="eredmeny" readonly> <input style="width: 35px; text-align: right; " name="mertegys1" readonly>
+                    <sup style="font-size: 17px;">3</sup>
+                    <br><br><b>Felszín eredménye: </b><input style="text-align: right;" name="eredmeny2" readonly> <input style="width: 35px; text-align: right;" name="mertegys2" readonly>
+                    <sup style="font-size: 17px;">2</sup>
+                    <br><br><input class="btn btn-dark" style="width: 180px; height: 40px;" type="button" value=" Visszaállítás " onClick="reset()">
+                
                 </form>
                     <script>
                     function terfogat() {
                         var x = parseInt(document.getElementById("egy").value);
+                        var mertekegyseg1 = document.getElementById("me").value;
                         if (x <= 0) {
                             alert("Nem lehet a beírt adat 0 vagy annál kisebb szám!")
                                 eredmeny.reset()
                         }
-                    document.szamol.eredmeny.value = document.szamol.egy.value * document.szamol.egy.value * document.szamol.egy.value;
+                        document.szamol.eredmeny.value = document.szamol.egy.value * document.szamol.egy.value * document.szamol.egy.value;
+                        document.szamol.mertegys1.value = mertekegyseg1
                     }
                     function felszin() {
                         var x = parseInt(document.getElementById("egy").value);
+                        var mertekegyseg1 = document.getElementById("me").value;
                         if (x <= 0) {
                             alert("Nem lehet a beírt adat 0 vagy annál kisebb szám!")
                                 eredmeny2.reset()
                         }
-                    document.szamol.eredmeny2.value = document.szamol.egy.value * document.szamol.egy.value * 6;
+                        document.szamol.eredmeny2.value = document.szamol.egy.value * document.szamol.egy.value * 6;
+                        document.szamol.mertegys2.value = mertekegyseg1
+                    }
+                    function reset() {
                     }
                     </script>
                 </p>

@@ -23,8 +23,9 @@
                     <p>Miylen hosszú a <b>c</b> oldal? <input type="number" id="harom" name="harom"><b> cm</b><br></p> 
                     <input class="btn btn-dark" style="width: 180px; height: 40px;" type="button" value=" Térfogat számítás " onClick="terfogat()">
                     <input class="btn btn-dark" style="width: 180px; height: 40px;" type="button" value=" Felszín számítás " onClick="felszin()"><br><br>
-                    <br><br><b>Térfogat eredménye: </b><input style="width: 80px;" name="eredmeny"> <b>cm<sup>3 </sup></b><br>
-                    <br><b>Felszín eredménye: </b><input style="width: 80px;" name="eredmeny2"> <b>cm<sup>2</sup></b>
+                    <br><br><b>Térfogat eredménye: </b><input readonly style="width: 80px;" name="eredmeny"> <b>cm<sup>3 </sup></b><br>
+                    <br><b>Felszín eredménye: </b><input readonly style="width: 80px;" name="eredmeny2"> <b>cm<sup>2</sup></b>
+                    <br><br><input class="btn btn-dark" style="width: 180px; height: 40px;" type="button" value=" Visszaállítás " onClick="reset()">
                 </form>
                     <script>
                     function terfogat() {
@@ -62,6 +63,8 @@
                                 eredmeny2.reset()
                         }
                     document.szamol.eredmeny2.value = document.szamol.egy.value * document.szamol.ketto.value * 2 + document.szamol.egy.value * document.szamol.harom.value * 2 + document.szamol.ketto.value * document.szamol.harom.value * 2;
+                    }
+                    function reset() {
                     }
                     </script>
                 </p>
