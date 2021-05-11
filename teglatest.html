@@ -18,13 +18,13 @@
             <h4 class="card-title" style="text-align: center;">Téglatest térfogat, felszín számítás</h4>
             <p class="card-text" style="">
                 <form style="text-align: center;" name="szamol">
-                    <p>Milyen hosszú az <b>a</b> oldal? <input type="number" id="egy" name="egy"><b> cm</b><br></p> 
-                    <p>Miylen hosszú a <b>b</b> oldal? <input type="number" id="ketto" name="ketto"><b> cm</b><br></p> 
-                    <p>Miylen hosszú a <b>c</b> oldal? <input type="number" id="harom" name="harom"><b> cm</b><br></p> 
+                    <p>Milyen hosszú az <b>a</b> oldal? <input style="text-align: right;" type="number" id="egy" name="egy"><b> cm</b><br></p> 
+                    <p>Miylen hosszú a <b>b</b> oldal? <input style="text-align: right;" type="number" id="ketto" name="ketto"><b> cm</b><br></p> 
+                    <p>Miylen hosszú a <b>c</b> oldal? <input style="text-align: right;" type="number" id="harom" name="harom"><b> cm</b><br></p> 
                     <input class="btn btn-dark" style="width: 180px; height: 40px;" type="button" value=" Térfogat számítás " onClick="terfogat()">
                     <input class="btn btn-dark" style="width: 180px; height: 40px;" type="button" value=" Felszín számítás " onClick="felszin()"><br><br>
-                    <br><br><b>Térfogat eredménye: </b><input readonly style="width: 80px;" name="eredmeny"> <b>cm<sup>3 </sup></b><br>
-                    <br><b>Felszín eredménye: </b><input readonly style="width: 80px;" name="eredmeny2"> <b>cm<sup>2</sup></b>
+                    <br><br><b>Térfogat eredménye: </b><input readonly style="width: 80px; text-align: right;" name="eredmeny"> <b>cm<sup>3 </sup></b><br>
+                    <br><b>Felszín eredménye: </b><input readonly style="width: 80px; text-align: right;" name="eredmeny2"> <b>cm<sup>2</sup></b>
                     <br><br><input class="btn btn-dark" style="width: 180px; height: 40px;" type="button" value=" Visszaállítás " onClick="reset()">
                 </form>
                     <script>
